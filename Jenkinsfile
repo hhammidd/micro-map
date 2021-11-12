@@ -56,19 +56,10 @@ pipeline {
 */
 
         stage("Remove Unused docker image") {
-                     steps{
-                    script {
-                        try {
-
+                    steps{
                             sh "docker rmi $registry:${BUILD_NUMBER.toInteger()-2}"
                     }
-                        } catch (Throwable e) {
-                                          echo "Caught ${e.toString()}"
-                                                      currentBuild.result = "SUCCESS"
-                                      }
-                    }
-
-        }
+                }
 
         stage("Install helm and deploy") {
             steps{
