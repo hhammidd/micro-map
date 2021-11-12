@@ -57,13 +57,7 @@ pipeline {
 
         stage("Remove Unused docker image") {
                     steps{
-
-                        try{
                             sh "docker rmi $registry:${BUILD_NUMBER.toInteger()-2}"
-                        } catch (Exception e) {
-                                    echo "Stage failed, but we continue"
-                                 }
-
              }
         }
 
