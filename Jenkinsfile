@@ -59,6 +59,7 @@ pipeline {
                     steps{
                             sh "docker rmi $registry:${BUILD_NUMBER.toInteger()-2}"
                     }
+
                 }
 
         stage("Install helm and deploy") {
