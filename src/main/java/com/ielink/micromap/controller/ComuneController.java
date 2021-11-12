@@ -17,7 +17,7 @@ public class ComuneController {
         //
         System.out.println(comuneID);
 
-        return new ComuneTo(1L, "Milan" + Math.random(), "Milan", "Milan", 2);
+        return new ComuneTo(1L, "Turin" + Math.random(), "Milan", "Milan", 2);
 
     }
 
@@ -29,7 +29,7 @@ public class ComuneController {
 
         for (int i = 0; i < 9; i++) {
             comuneObj.setComuneId((1 + (long) i));
-            comuneObj.setComuneName1("comune NO" + Math.random());
+            comuneObj.setComuneName1("Turin" + Math.random());
             comuneObj.setComuneName2("comune name" + Math.random());
             comuneObj.setCodeComune("code " + Math.random());
             comuneObj.setCodeFather(i);
