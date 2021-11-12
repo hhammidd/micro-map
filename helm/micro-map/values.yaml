@@ -1,0 +1,22 @@
+replicaCount: 1
+tag: 1
+namespace: default
+service:
+  type: NodePort
+  name: micro-map-svc
+
+ImageName: hhssaaffii/micro-map
+
+port: 8087
+
+fullName: micro-map
+
+appName: micro-map
+
+portNumber: 8087
+host: hello-world-3.pvt
+
+image: ##DOCKER_REGISTRY##/hhssaaffii/micro-map
+
+artifactory:
+  name: artifactory
