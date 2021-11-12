@@ -54,6 +54,13 @@ pipeline {
             }
         }
 */
+
+        stage("Remove Unused docker image") {
+                    steps{
+                            sh "docker rmi $registry:${BUILD_NUMBER.toInteger()-2}"
+             }
+        }
+
         stage("Install helm and deploy") {
             steps{
                 sh " helm upgrade micro-map  ~/apps/app1/app-jenkins/helm/micro-map/ --set tag=${params.IMAGE_TAG}"
