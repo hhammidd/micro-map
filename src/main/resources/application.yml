@@ -5,7 +5,7 @@
     hibernate:
       ddl-auto: update
   datasource:
-    url: jdbc:postgresql://host.docker.internal:5432/mgis
+    url: jdbc:postgresql://127.0.0.1:5432/mgis
     hikari:
       username: testapp
       password: testapp1234!
