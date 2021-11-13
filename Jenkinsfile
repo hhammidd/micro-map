@@ -53,7 +53,7 @@ pipeline {
                 sh "docker pull hhssaaffii/micro-map:${params.IMAGE_TAG}"
             }
         }
-*/
+
 
         stage("Remove Unused docker image") {
                     steps{
@@ -61,6 +61,7 @@ pipeline {
                     }
 
                 }
+*/
 
         stage("Install helm and deploy") {
             steps{
