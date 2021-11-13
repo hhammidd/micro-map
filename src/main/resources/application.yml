@@ -5,7 +5,7 @@
     hibernate:
       ddl-auto: update
   datasource:
-    url: jdbc:postgresql://localhost:5432/mgis
+    url: jdbc:postgresql://host.minikube.internal:5432/mgis
     hikari:
       username: testapp
       password: testapp1234!
