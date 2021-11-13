@@ -1,19 +1,32 @@
-package com.ielink.micromap.dto;
+package com.ielink.micromap.model;
 
-public class ComuneTo {
+import javax.persistence.*;
+
+@Entity
+@Table(name = "comune")
+public class Comune {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long comuneId;
-    private String comuneName;
-    private String comuneCode;
-    private Long provinceId;
 
-    public ComuneTo() {
+    @Column(name = "comune_name")
+    private String comuneName;
+
+    @Column(name = "comune_code")
+    private String comuneCode;
+
+    @Column(name = "province_id")
+    private Long comuneFather;
+
+    public Comune() {
     }
 
-    public ComuneTo(Long comuneId, String comuneName, String comuneCode, Long provinceId) {
-        this.comuneId = comuneId;
+    public Comune(String comuneName, String comuneCode, Long comuneFather) {
         this.comuneName = comuneName;
         this.comuneCode = comuneCode;
-        this.provinceId = provinceId;
+        this.comuneFather = comuneFather;
     }
 
     public Long getComuneId() {
@@ -40,11 +53,11 @@ public class ComuneTo {
         this.comuneCode = comuneCode;
     }
 
-    public Long getProvinceId() {
-        return provinceId;
+    public Long getComuneFather() {
+        return comuneFather;
     }
 
-    public void setProvinceId(Long provinceId) {
-        this.provinceId = provinceId;
+    public void setComuneFather(Long comuneFather) {
+        this.comuneFather = comuneFather;
     }
 }

@@ -1,7 +1,7 @@
 # Spring boot server port 
 * 8090
 # Url after swagger
-* http://localhost:8090/swagger-ui.html#
+* http://localhost:8087/swagger-ui.html#
 # Dockerizing
 * Add appName to pom:
 ```
