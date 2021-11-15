@@ -5,8 +5,8 @@
     hibernate:
       ddl-auto: update
   datasource:
-    url: jdbc:postgresql://host.minikube.internal:5432/mgis
+    url: ${URL}
     hikari:
-      username: testapp
-      password: testapp1234!
+      username: ${DB_USERNAME}
+      password: ${DB_PASSWORD}
       # put pass in kubernetes secret
