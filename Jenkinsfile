@@ -65,7 +65,7 @@ pipeline {
 
         stage("Install helm and deploy") {
             steps{
-                sh " helm upgrade micro-map  ~/apps/app1/app-jenkins/helm/micro-map/ --set tag=${params.IMAGE_TAG}"
+                sh " helm upgrade micro-map  ~/apps/apps-helm-charts/micro-map/ --set tag=${params.IMAGE_TAG}"
             }
         }
 
